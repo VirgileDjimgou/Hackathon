@@ -46,6 +46,7 @@ public class AwsUtility {
      * @param context An Context instance.
      * @return A default S3 client.
      */
+    // Definition for amazon Client
     public static AmazonS3Client getS3Client(Context context) {
         if (sS3Client == null) {
             sS3Client = new AmazonS3Client(getCredProvider(context.getApplicationContext()));
