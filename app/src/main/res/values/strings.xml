@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CloudCam</string>
+
+    <string name="request_camera_permission">This app needs camera permission.</string>
+    <string name="camera2_api_error">This device doesn\'t support Camera2 API.</string>
+    <string name="iso">ISO</string>
+    <string name="exposure_time">Exposure Time</string>
+    <string name="focus">Focus</string>
+    <string name="capture">Capture</string>
+    <string name="upload">Upload</string>
+</resources>
