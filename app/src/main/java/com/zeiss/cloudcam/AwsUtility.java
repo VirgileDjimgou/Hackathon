@@ -13,7 +13,10 @@ import com.amazonaws.services.s3.AmazonS3Client;
  */
 public class AwsUtility {
 
-    private final static String IDENTITY_POOL_ID = "eu-central-1:63a5bfb7-461d-428f-bf76-73e1b7a18ef8";
+    // private final static String IDENTITY_POOL_ID = "eu-central-1:63a5bfb7-461d-428f-bf76-73e1b7a18ef8";
+    // private final static String  IDENTITY_POOL_ID  = "AKIAII3RI56U56HW2UAA:RMj51prMo4ysS7H65rAdHCm0QerC2+x2PzEiYXxw";
+    private final static String  IDENTITY_POOL_ID = "eu-west-1_ygH6puu6A";
+    // private final static String IDENTITY_POOL_ID = " 2001:db8:1234:1a00:9691:9503:25ad:1761/128";
 
     // We only need one instance of the clients and credentials provider
     private static AmazonS3Client sS3Client;
@@ -27,6 +30,7 @@ public class AwsUtility {
      * @param context An Context instance.
      * @return A default credential provider.
      */
+
     private static CognitoCachingCredentialsProvider getCredProvider(Context context) {
         if (sCredProvider == null) {
             sCredProvider = new CognitoCachingCredentialsProvider(
@@ -47,6 +51,14 @@ public class AwsUtility {
      * @return A default S3 client.
      */
     // Definition for amazon Client
+    // schlusssel  for Acccount   SSh Schlussel  muss hier eingegeben werden
+    public String  AmazonSSh(){
+         // int  StringToReturn = "leer Zeischen ";
+         return  "echo";
+    }
+
+
+
     public static AmazonS3Client getS3Client(Context context) {
         if (sS3Client == null) {
             sS3Client = new AmazonS3Client(getCredProvider(context.getApplicationContext()));

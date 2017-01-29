@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 /**
  * Created by zoafro on 12.12.2016.
  */
+
 public class ApplicationSettings {
 
     private static ApplicationSettings instance;

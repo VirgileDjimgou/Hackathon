@@ -447,8 +447,8 @@ public class CaptureFragment extends CameraPreviewFragment implements View.OnCli
         } catch (Exception ex) {
             Log.e(TAG, ex.getMessage());
         }*/
-
-        Log.d(TAG, "Uploading '" + mLastImageFile.getAbsolutePath() + "' ...");
+        Log.d("Test", "Uploaden");
+        Log.e(TAG, "Uploading '" + mLastImageFile.getAbsolutePath() + "' ...");
         TransferObserver observer = mTransferUtility.upload(BUCKET_NAME, mLastImageFile.getName(), mLastImageFile);
         observer.setTransferListener(new UploadListener());
     }
@@ -457,6 +457,7 @@ public class CaptureFragment extends CameraPreviewFragment implements View.OnCli
      * A TransferListener class that can listen to a upload task and be notified
      * when the status changes.
      */
+    // schlussel function  Funktion  zum hochladen die Bilder , die wir  mit Smartphone Kamera  hochgeladen haben ..
     private class UploadListener implements TransferListener {
 
         // Simply updates the UI list when notified.
@@ -475,6 +476,8 @@ public class CaptureFragment extends CameraPreviewFragment implements View.OnCli
         public void onStateChanged(int id, TransferState newState) {
             Log.d(TAG, "onStateChanged: " + id + ", " + newState);
             if (newState == TransferState.COMPLETED) {
+                // wenn den Upload zu ende ist und show
+                showToast(" dim prinzipe ist der Photo im ");
                 showToast("Upload finished.");
             } else {
                 showToast("Upload error.");
