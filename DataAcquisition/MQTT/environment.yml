@@ -1,0 +1,21 @@
+# Conda environment file for Python dependencies
+# 
+# This file may be used to create an environment using:
+# $ conda env create --file <this file>
+#
+# To update an environment, use:
+# $ conda env update --file <this file> --name <existing environment>
+#
+# If collecting pip packages from ~gohlke yields a HTTP error 404, check
+# manually for the packages at http://www.lfd.uci.edu/~gohlke/pythonlibs/
+#
+# platform: win-64
+name: MQTT
+dependencies:
+- python>=3.5
+- anaconda
+- pip
+# pre-compiled binaries with pip
+- pip:
+    - paho-mqtt
+    - pysocks
